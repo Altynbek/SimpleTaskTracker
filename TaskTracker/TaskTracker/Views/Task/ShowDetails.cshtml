@@ -1,0 +1,48 @@
+﻿@model TaskTracker.Models.Task.TaskModel
+
+@{
+    ViewBag.Title = "ShowDetails";
+}
+
+<h2>ShowDetails</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Details)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Details)
+        </dd>
+
+        <dt>
+            Status
+        </dt>
+
+        <dd>
+            @Model.Status
+        </dd>
+        <dt>
+            Type
+        </dt>
+
+        <dd>
+            @Model.Type
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
